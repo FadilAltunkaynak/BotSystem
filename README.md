@@ -6,6 +6,30 @@ pair selection, take-profit rules, trailing stops, and portfolio compounding.
 Turkce ayrintili tanitim:
 [BotSystem Tanitimi](docs/PRODUCT_OVERVIEW_TR.md).
 
+## Real Helper Screenshots
+
+The following images are real helper outputs included with the project. They
+are not generated mockups.
+
+<table>
+  <tr>
+    <td width="50%"><img src="images/altrank.png" alt="AltRank helper output"></td>
+    <td width="50%"><img src="images/galaxyscore.png" alt="GalaxyScore helper output"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>AltRank pair selection</strong></td>
+    <td align="center"><strong>GalaxyScore pair selection</strong></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="images/compound.png" alt="Compound helper output"></td>
+    <td width="50%"><img src="images/watchlist.png" alt="Watchlist helper output"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Profit compounding</strong></td>
+    <td align="center"><strong>Watchlist automation</strong></td>
+  </tr>
+</table>
+
 > This software is not financial advice. Trading can result in partial or total
 > loss. Start with a paper account and grant API keys only the permissions a
 > helper actually needs.
