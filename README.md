@@ -3,6 +3,9 @@
 Open-source automation helpers for managing 3Commas trading bots, watchlists,
 pair selection, take-profit rules, trailing stops, and portfolio compounding.
 
+Turkce ayrintili tanitim:
+[BotSystem Tanitimi](docs/PRODUCT_OVERVIEW_TR.md).
+
 > This software is not financial advice. Trading can result in partial or total
 > loss. Start with a paper account and grant API keys only the permissions a
 > helper actually needs.
@@ -85,6 +88,7 @@ installing them.
 - [Helper reference](docs/HELPER_REFERENCE.md)
 - [Secure operations](docs/SECURE_OPERATIONS.md)
 - [Glossary](docs/GLOSSARY.md)
+- [Feature matrix](docs/FEATURE_MATRIX.md)
 - [Wiki index](docs/WIKI.md)
 
 ## License and Attribution
