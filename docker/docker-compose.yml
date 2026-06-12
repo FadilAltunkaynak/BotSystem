@@ -1,16 +1,13 @@
-version: "3.9"
-
 services:
-    bot:
-        image: galaxyscore
-        build:
-          context: .
-        container_name: galaxyscore
-        tty: true
-        volumes:
-          - config-galaxyscore:/app/config
-          - /etc/timezone:/etc/timezone:ro
-        command: python galaxyscore.py -d config
+  bot:
+    image: fadilaltunkaynak/botsystem:local
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    restart: unless-stopped
+    volumes:
+      - bot-config:/config
+    command: ["python", "-u", "galaxyscore.py", "-d", "/config"]
 
 volumes:
-    config-galaxyscore:
+  bot-config:

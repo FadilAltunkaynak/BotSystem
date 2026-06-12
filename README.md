@@ -34,7 +34,7 @@ Requirements: Python 3.9+, Git, a 3Commas account, and credentials for the
 specific external data providers used by your chosen helper.
 
 ```bash
-git clone https://github.com/FadilAltunkaynak/BotSystem.git
+git clone --branch staging-publication --single-branch https://github.com/FadilAltunkaynak/BotSystem.git
 cd BotSystem
 python -m venv .venv
 source .venv/bin/activate
@@ -42,6 +42,10 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 python altrank.py
 ```
+
+Expected result: the first run creates `altrank.ini` and exits or reports the
+settings that must be completed. Add credentials only to that local file, then
+run the same command again.
 
 On Windows PowerShell, activate with:
 
@@ -84,4 +88,3 @@ The BotSystem helper code is distributed under the MIT License. It is derived
 from the `3commas-cyber-bots` project and retains the upstream license and
 copyright terms. See [LICENSE](LICENSE) and
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-

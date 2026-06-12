@@ -1,17 +1,28 @@
-FROM python:3.8-slim
+FROM python:3.11-slim
 
-ENV TZ="Europe/Amsterdam"
-
-COPY requirements.txt /
-
-RUN apt-get update && apt-get install -y build-essential libffi-dev tzdata \
-    && python3 -m pip install --upgrade pip \
-    && pip3 install --no-cache-dir -U -I -r requirements.txt \
-        && rm -rf /var/lib/apt/lists/*
-
-VOLUME /config
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    TZ=Europe/Istanbul
 
 WORKDIR /app
-COPY galaxyscore.py .
 
-CMD [ "python", "-u", "./galaxyscore.py", "-d", "/config" ]
+COPY requirements.txt .
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends build-essential libffi-dev tzdata \
+    && python -m pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt \
+    && apt-get purge -y build-essential \
+    && apt-get autoremove -y \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY *.py ./
+COPY helpers ./helpers
+
+RUN useradd --create-home --uid 10001 botsystem \
+    && mkdir -p /config \
+    && chown -R botsystem:botsystem /app /config
+
+USER botsystem
+VOLUME ["/config"]
+
+CMD ["python", "-u", "galaxyscore.py", "-d", "/config"]
