@@ -77,9 +77,14 @@ installing them.
 ## Documentation
 
 - [Installation](docs/INSTALLATION.md)
+- [Turkce ayrintili kurulum](docs/INSTALLATION_TR.md)
 - [Configuration](docs/CONFIGURATION.md)
 - [Operations](docs/OPERATIONS.md)
 - [Architecture](docs/ARCHITECTURE.md)
+- [Troubleshooting](docs/TROUBLESHOOTING.md)
+- [Helper reference](docs/HELPER_REFERENCE.md)
+- [Secure operations](docs/SECURE_OPERATIONS.md)
+- [Glossary](docs/GLOSSARY.md)
 - [Wiki index](docs/WIKI.md)
 
 ## License and Attribution
